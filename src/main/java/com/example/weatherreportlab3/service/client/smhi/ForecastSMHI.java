@@ -93,7 +93,7 @@ public class ForecastSMHI {
     public Double getTomorrowsHumidity() {
         TimeSeries timeSeries = getNext24hTimeSeries();
         Parameter parameter = timeSeries.getHumidity();
-        return parameter.getValues().get(0); // TODO FIX
+        return parameter.getValues().get(0);
     }
 
     private TimeSeries getNext24hTimeSeries() {
