@@ -13,9 +13,9 @@ public class ForecastDTO {
     public final String timestamp;
 
     public ForecastDTO(Forecast forecast) {
-        this.origin = forecast.origin;
-        this.temperature = forecast.temperature;
-        this.humidity = forecast.humidity;
-        this.timestamp = forecast.timestamp.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
+        this.origin = forecast.getOrigin();
+        this.temperature = forecast.getTemperature();
+        this.humidity = forecast.getHumidity();
+        this.timestamp = forecast.getTimestamp().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
     }
 }

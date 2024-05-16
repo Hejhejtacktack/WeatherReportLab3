@@ -9,16 +9,32 @@ import java.time.LocalDateTime;
 public class Forecast {
     private final static Double IDEAL_TEMP = 30.0;
     private final static Double IDEAL_HUM = 40.0;
-    public final String origin;
-    public final Double temperature;
-    public final Double humidity;
-    public final LocalDateTime timestamp;
+    private final String origin;
+    private final Double temperature;
+    private final Double humidity;
+    private final LocalDateTime timestamp;
 
     private Forecast(String origin, Double temperature, Double humidity, LocalDateTime timestamp) {
         this.origin = origin;
         this.temperature = temperature;
         this.humidity = humidity;
         this.timestamp = timestamp;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public Double getTemperature() {
+        return temperature;
+    }
+
+    public Double getHumidity() {
+        return humidity;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
     }
 
     public static Forecast optimizedForecast(ForecastMET forecastMET,
