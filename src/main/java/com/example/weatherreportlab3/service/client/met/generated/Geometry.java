@@ -1,7 +1,8 @@
 
-package com.example.weatherreportlab3.service.client.met;
+package com.example.weatherreportlab3.service.client.met.generated;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -12,36 +13,36 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "summary",
-    "details"
+    "type",
+    "coordinates"
 })
-public class Next12Hours {
+public class Geometry {
 
-    @JsonProperty("summary")
-    private Summary summary;
-    @JsonProperty("details")
-    private Details__1 details;
+    @JsonProperty("type")
+    private String type;
+    @JsonProperty("coordinates")
+    private List<Double> coordinates;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
-    @JsonProperty("summary")
-    public Summary getSummary() {
-        return summary;
+    @JsonProperty("type")
+    public String getType() {
+        return type;
     }
 
-    @JsonProperty("summary")
-    public void setSummary(Summary summary) {
-        this.summary = summary;
+    @JsonProperty("type")
+    public void setType(String type) {
+        this.type = type;
     }
 
-    @JsonProperty("details")
-    public Details__1 getDetails() {
-        return details;
+    @JsonProperty("coordinates")
+    public List<Double> getCoordinates() {
+        return coordinates;
     }
 
-    @JsonProperty("details")
-    public void setDetails(Details__1 details) {
-        this.details = details;
+    @JsonProperty("coordinates")
+    public void setCoordinates(List<Double> coordinates) {
+        this.coordinates = coordinates;
     }
 
     @JsonAnyGetter

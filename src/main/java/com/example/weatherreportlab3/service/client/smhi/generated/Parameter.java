@@ -1,5 +1,5 @@
 
-package com.example.weatherreportlab3.service.client.smhi;
+package com.example.weatherreportlab3.service.client.smhi.generated;
 
 import java.util.LinkedHashMap;
 import java.util.List;

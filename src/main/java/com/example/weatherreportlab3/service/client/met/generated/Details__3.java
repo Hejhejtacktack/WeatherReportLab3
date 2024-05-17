@@ -1,5 +1,5 @@
 
-package com.example.weatherreportlab3.service.client.met;
+package com.example.weatherreportlab3.service.client.met.generated;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -12,23 +12,23 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "symbol_code"
+    "precipitation_amount"
 })
-public class Summary {
+public class Details__3 {
 
-    @JsonProperty("symbol_code")
-    private String symbolCode;
+    @JsonProperty("precipitation_amount")
+    private Double precipitationAmount;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
-    @JsonProperty("symbol_code")
-    public String getSymbolCode() {
-        return symbolCode;
+    @JsonProperty("precipitation_amount")
+    public Double getPrecipitationAmount() {
+        return precipitationAmount;
     }
 
-    @JsonProperty("symbol_code")
-    public void setSymbolCode(String symbolCode) {
-        this.symbolCode = symbolCode;
+    @JsonProperty("precipitation_amount")
+    public void setPrecipitationAmount(Double precipitationAmount) {
+        this.precipitationAmount = precipitationAmount;
     }
 
     @JsonAnyGetter

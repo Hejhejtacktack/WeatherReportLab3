@@ -1,8 +1,7 @@
 
-package com.example.weatherreportlab3.service.client.meteo;
+package com.example.weatherreportlab3.service.client.met.generated;
 
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -14,48 +13,35 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "time",
-    "temperature_2m",
-    "relative_humidity_2m"
+    "data"
 })
-public class Hourly {
+public class Timeseries {
 
     @JsonProperty("time")
-    private List<String> time;
-    @JsonProperty("temperature_2m")
-    private List<Double> temperature2m;
-    @JsonProperty("relative_humidity_2m")
-    private List<Double> relativeHumidity2m;
+    private String time;
+    @JsonProperty("data")
+    private Data data;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
     @JsonProperty("time")
-    public List<String> getTime() {
+    public String getTime() {
         return time;
     }
 
     @JsonProperty("time")
-    public void setTime(List<String> time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
-    @JsonProperty("temperature_2m")
-    public List<Double> getTemperature2m() {
-        return temperature2m;
+    @JsonProperty("data")
+    public Data getData() {
+        return data;
     }
 
-    @JsonProperty("temperature_2m")
-    public void setTemperature2m(List<Double> temperature2m) {
-        this.temperature2m = temperature2m;
-    }
-
-    @JsonProperty("relative_humidity_2m")
-    public List<Double> getRelativeHumidity2m() {
-        return relativeHumidity2m;
-    }
-
-    @JsonProperty("relative_humidity_2m")
-    public void setRelativeHumidity2m(List<Double> relativeHumidity2m) {
-        this.relativeHumidity2m = relativeHumidity2m;
+    @JsonProperty("data")
+    public void setData(Data data) {
+        this.data = data;
     }
 
     @JsonAnyGetter

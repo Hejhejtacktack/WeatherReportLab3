@@ -1,5 +1,5 @@
 
-package com.example.weatherreportlab3.service.client.smhi;
+package com.example.weatherreportlab3.service.client.smhi.generated;
 
 import java.time.ZonedDateTime;
 import java.util.LinkedHashMap;

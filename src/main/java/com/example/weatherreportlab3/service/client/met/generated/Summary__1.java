@@ -1,8 +1,7 @@
 
-package com.example.weatherreportlab3.service.client.met;
+package com.example.weatherreportlab3.service.client.met.generated;
 
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -13,36 +12,23 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "meta",
-    "timeseries"
+    "symbol_code"
 })
-public class Properties {
+public class Summary__1 {
 
-    @JsonProperty("meta")
-    private Meta meta;
-    @JsonProperty("timeseries")
-    private List<Timeseries> timeseries;
+    @JsonProperty("symbol_code")
+    private String symbolCode;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
-    @JsonProperty("meta")
-    public Meta getMeta() {
-        return meta;
+    @JsonProperty("symbol_code")
+    public String getSymbolCode() {
+        return symbolCode;
     }
 
-    @JsonProperty("meta")
-    public void setMeta(Meta meta) {
-        this.meta = meta;
-    }
-
-    @JsonProperty("timeseries")
-    public List<Timeseries> getTimeseries() {
-        return timeseries;
-    }
-
-    @JsonProperty("timeseries")
-    public void setTimeseries(List<Timeseries> timeseries) {
-        this.timeseries = timeseries;
+    @JsonProperty("symbol_code")
+    public void setSymbolCode(String symbolCode) {
+        this.symbolCode = symbolCode;
     }
 
     @JsonAnyGetter

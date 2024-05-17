@@ -1,5 +1,5 @@
 
-package com.example.weatherreportlab3.service.client.met;
+package com.example.weatherreportlab3.service.client.met.generated;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

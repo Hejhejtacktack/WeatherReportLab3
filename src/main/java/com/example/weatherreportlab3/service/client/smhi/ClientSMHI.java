@@ -1,5 +1,6 @@
 package com.example.weatherreportlab3.service.client.smhi;
 
+import com.example.weatherreportlab3.service.client.smhi.generated.ForecastSMHI;
 import org.springframework.web.service.annotation.GetExchange;
 
 public interface ClientSMHI {

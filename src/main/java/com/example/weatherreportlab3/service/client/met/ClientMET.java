@@ -1,5 +1,6 @@
 package com.example.weatherreportlab3.service.client.met;
 
+import com.example.weatherreportlab3.service.client.met.generated.ForecastMET;
 import org.springframework.web.service.annotation.GetExchange;
 
 public interface ClientMET {

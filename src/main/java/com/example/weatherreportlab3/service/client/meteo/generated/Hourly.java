@@ -1,7 +1,8 @@
 
-package com.example.weatherreportlab3.service.client.meteo;
+package com.example.weatherreportlab3.service.client.meteo.generated;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -16,44 +17,44 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "temperature_2m",
     "relative_humidity_2m"
 })
-public class HourlyUnits {
+public class Hourly {
 
     @JsonProperty("time")
-    private String time;
+    private List<String> time;
     @JsonProperty("temperature_2m")
-    private String temperature2m;
+    private List<Double> temperature2m;
     @JsonProperty("relative_humidity_2m")
-    private String relativeHumidity2m;
+    private List<Double> relativeHumidity2m;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
     @JsonProperty("time")
-    public String getTime() {
+    public List<String> getTime() {
         return time;
     }
 
     @JsonProperty("time")
-    public void setTime(String time) {
+    public void setTime(List<String> time) {
         this.time = time;
     }
 
     @JsonProperty("temperature_2m")
-    public String getTemperature2m() {
+    public List<Double> getTemperature2m() {
         return temperature2m;
     }
 
     @JsonProperty("temperature_2m")
-    public void setTemperature2m(String temperature2m) {
+    public void setTemperature2m(List<Double> temperature2m) {
         this.temperature2m = temperature2m;
     }
 
     @JsonProperty("relative_humidity_2m")
-    public String getRelativeHumidity2m() {
+    public List<Double> getRelativeHumidity2m() {
         return relativeHumidity2m;
     }
 
     @JsonProperty("relative_humidity_2m")
-    public void setRelativeHumidity2m(String relativeHumidity2m) {
+    public void setRelativeHumidity2m(List<Double> relativeHumidity2m) {
         this.relativeHumidity2m = relativeHumidity2m;
     }
 

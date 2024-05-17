@@ -1,8 +1,7 @@
 
-package com.example.weatherreportlab3.service.client.meteo;
+package com.example.weatherreportlab3.service.client.meteo.generated;
 
 import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;

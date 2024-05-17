@@ -1,8 +1,8 @@
 package com.example.weatherreportlab3.service.model;
 
-import com.example.weatherreportlab3.service.client.met.ForecastMET;
-import com.example.weatherreportlab3.service.client.meteo.ForecastMETEO;
-import com.example.weatherreportlab3.service.client.smhi.ForecastSMHI;
+import com.example.weatherreportlab3.service.client.met.generated.ForecastMET;
+import com.example.weatherreportlab3.service.client.meteo.generated.ForecastMETEO;
+import com.example.weatherreportlab3.service.client.smhi.generated.ForecastSMHI;
 
 import java.time.LocalDateTime;
 

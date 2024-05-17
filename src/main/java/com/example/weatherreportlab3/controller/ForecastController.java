@@ -21,10 +21,10 @@ public class ForecastController {
     @GetMapping("/liljeholmen")
     public String one(Model model) {
         ForecastDTO forecastDTO = new ForecastDTO(this.forecastService.getOptimizedForecast());
-        model.addAttribute("origin", forecastDTO.origin);
-        model.addAttribute("timestamp", forecastDTO.timestamp);
-        model.addAttribute("temperature", forecastDTO.temperature);
-        model.addAttribute("humidity", forecastDTO.humidity);
+        model.addAttribute("origin", forecastDTO.origin());
+        model.addAttribute("timestamp", forecastDTO.timestamp());
+        model.addAttribute("temperature", forecastDTO.temperature());
+        model.addAttribute("humidity", forecastDTO.humidity());
         return "weather";
     }
 }

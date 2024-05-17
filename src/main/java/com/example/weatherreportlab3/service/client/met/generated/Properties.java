@@ -1,5 +1,5 @@
 
-package com.example.weatherreportlab3.service.client.smhi;
+package com.example.weatherreportlab3.service.client.met.generated;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -13,36 +13,36 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "type",
-    "coordinates"
+    "meta",
+    "timeseries"
 })
-public class Geometry {
+public class Properties {
 
-    @JsonProperty("type")
-    private String type;
-    @JsonProperty("coordinates")
-    private List<List<Double>> coordinates;
+    @JsonProperty("meta")
+    private Meta meta;
+    @JsonProperty("timeseries")
+    private List<Timeseries> timeseries;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
-    @JsonProperty("type")
-    public String getType() {
-        return type;
+    @JsonProperty("meta")
+    public Meta getMeta() {
+        return meta;
     }
 
-    @JsonProperty("type")
-    public void setType(String type) {
-        this.type = type;
+    @JsonProperty("meta")
+    public void setMeta(Meta meta) {
+        this.meta = meta;
     }
 
-    @JsonProperty("coordinates")
-    public List<List<Double>> getCoordinates() {
-        return coordinates;
+    @JsonProperty("timeseries")
+    public List<Timeseries> getTimeseries() {
+        return timeseries;
     }
 
-    @JsonProperty("coordinates")
-    public void setCoordinates(List<List<Double>> coordinates) {
-        this.coordinates = coordinates;
+    @JsonProperty("timeseries")
+    public void setTimeseries(List<Timeseries> timeseries) {
+        this.timeseries = timeseries;
     }
 
     @JsonAnyGetter

@@ -1,5 +1,5 @@
 
-package com.example.weatherreportlab3.service.client.met;
+package com.example.weatherreportlab3.service.client.met.generated;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -12,36 +12,23 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "time",
-    "data"
+    "precipitation_amount"
 })
-public class Timeseries {
+public class Details__2 {
 
-    @JsonProperty("time")
-    private String time;
-    @JsonProperty("data")
-    private Data data;
+    @JsonProperty("precipitation_amount")
+    private Double precipitationAmount;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
-    @JsonProperty("time")
-    public String getTime() {
-        return time;
+    @JsonProperty("precipitation_amount")
+    public Double getPrecipitationAmount() {
+        return precipitationAmount;
     }
 
-    @JsonProperty("time")
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    @JsonProperty("data")
-    public Data getData() {
-        return data;
-    }
-
-    @JsonProperty("data")
-    public void setData(Data data) {
-        this.data = data;
+    @JsonProperty("precipitation_amount")
+    public void setPrecipitationAmount(Double precipitationAmount) {
+        this.precipitationAmount = precipitationAmount;
     }
 
     @JsonAnyGetter
